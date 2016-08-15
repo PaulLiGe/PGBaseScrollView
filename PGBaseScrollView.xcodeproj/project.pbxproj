@@ -15,7 +15,7 @@
 		E46EEE731D53966E00C9505C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46EEE711D53966E00C9505C /* LaunchScreen.storyboard */; };
 		E46EEE7E1D53966E00C9505C /* PGBaseScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E46EEE7D1D53966E00C9505C /* PGBaseScrollViewTests.m */; };
 		E46EEE891D53966E00C9505C /* PGBaseScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E46EEE881D53966E00C9505C /* PGBaseScrollViewUITests.m */; };
-		E46EEE981D53969E00C9505C /* PGBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E46EEE971D53969E00C9505C /* PGBaseScrollView.m */; };
+		E46EEE981D53969E00C9505C /* PGLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E46EEE971D53969E00C9505C /* PGLScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		E46EEE841D53966E00C9505C /* PGBaseScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGBaseScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46EEE881D53966E00C9505C /* PGBaseScrollViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGBaseScrollViewUITests.m; sourceTree = "<group>"; };
 		E46EEE8A1D53966E00C9505C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E46EEE961D53969E00C9505C /* PGBaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGBaseScrollView.h; sourceTree = "<group>"; };
-		E46EEE971D53969E00C9505C /* PGBaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGBaseScrollView.m; sourceTree = "<group>"; };
+		E46EEE961D53969E00C9505C /* PGLScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGLScrollView.h; sourceTree = "<group>"; };
+		E46EEE971D53969E00C9505C /* PGLScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGLScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +90,7 @@
 				E46EEE611D53966E00C9505C /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		E46EEE611D53966E00C9505C /* Products */ = {
 			isa = PBXGroup;
@@ -108,8 +109,8 @@
 				E46EEE671D53966E00C9505C /* AppDelegate.m */,
 				E46EEE691D53966E00C9505C /* ViewController.h */,
 				E46EEE6A1D53966E00C9505C /* ViewController.m */,
-				E46EEE961D53969E00C9505C /* PGBaseScrollView.h */,
-				E46EEE971D53969E00C9505C /* PGBaseScrollView.m */,
+				E46EEE961D53969E00C9505C /* PGLScrollView.h */,
+				E46EEE971D53969E00C9505C /* PGLScrollView.m */,
 				E46EEE6C1D53966E00C9505C /* Main.storyboard */,
 				E46EEE6F1D53966E00C9505C /* Assets.xcassets */,
 				E46EEE711D53966E00C9505C /* LaunchScreen.storyboard */,
@@ -276,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E46EEE6B1D53966E00C9505C /* ViewController.m in Sources */,
-				E46EEE981D53969E00C9505C /* PGBaseScrollView.m in Sources */,
+				E46EEE981D53969E00C9505C /* PGLScrollView.m in Sources */,
 				E46EEE681D53966E00C9505C /* AppDelegate.m in Sources */,
 				E46EEE651D53966E00C9505C /* main.m in Sources */,
 			);
@@ -504,6 +505,7 @@
 				E46EEE8F1D53966E00C9505C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E46EEE901D53966E00C9505C /* Build configuration list for PBXNativeTarget "PGBaseScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +514,7 @@
 				E46EEE921D53966E00C9505C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E46EEE931D53966E00C9505C /* Build configuration list for PBXNativeTarget "PGBaseScrollViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +523,7 @@
 				E46EEE951D53966E00C9505C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
