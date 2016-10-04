@@ -42,15 +42,15 @@
 
 - (void)configureBottomScrollView {
     PGLScrollView *scrollView = [[PGLScrollView alloc] initWithFrame:CGRectMake(0, 240, self.view.frame.size.width, 300)];
-    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 800);
+    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 24000);
     [self.view addSubview:scrollView];
     scrollView.backgroundColor = [UIColor cyanColor];
     
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 30; i++) {
         CGFloat x = 20;
         CGFloat y = 20 + i * 120;
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(x, y, 200, 100)];
-        view.backgroundColor = self.colors[i];
+        view.backgroundColor = [UIColor orangeColor];
         [scrollView addSubview:view];
     }
 }

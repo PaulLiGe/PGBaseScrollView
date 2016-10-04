@@ -27,12 +27,12 @@
 
 - (void)panGestureAction:(UIPanGestureRecognizer *)pan {
     if (pan.state == UIGestureRecognizerStateBegan) {
-        self.startLocation = self.bounds.origin;
-        NSLog(@"%@", NSStringFromCGPoint(self.startLocation));
+//        self.startLocation = self.bounds.origin;
+//        NSLog(@"%@", NSStringFromCGPoint(self.startLocation));
     } else if (pan.state == UIGestureRecognizerStateChanged) {
         // 相对于初始触摸点的偏移量
         CGPoint point = [pan translationInView:self];
-        NSLog(@"%@", NSStringFromCGPoint(point));
+//        NSLog(@"%@", NSStringFromCGPoint(point));
         CGFloat newOriginalX = self.startLocation.x - point.x;
         CGFloat newOriginalY = self.startLocation.y - point.y;
         
@@ -58,7 +58,32 @@
         self.bounds = bounds;
     } else if (pan.state == UIGestureRecognizerStateEnded) {
         // 手指离开屏幕后减速滑动到停止的效果
+//        CGPoint velocity = [pan velocityInView:self];
+//        NSLog(@"velocity:%@", NSStringFromCGPoint(velocity));
+//        CGFloat newOriginalY = velocity.y / 496;
+//        CGRect bounds = self.bounds;
+//        bounds.origin = CGPointMake(bounds.origin.x, newOriginalY);
+//        
+//        [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+//            self.bounds = bounds;
+//        } completion:NULL];
         
+        
+        CGPoint velocity = [pan velocityInView:self];
+        CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
+        CGFloat slideMult = magnitude / 200;
+        NSLog(@"magnitude: %f, slideMult: %f", magnitude, slideMult);
+        
+        float slideFactor = 0.1 * slideMult; // Increase for more of a slide
+        CGPoint finalPoint = CGPointMake(self.bounds.origin.x + (velocity.x * slideFactor),
+                                         self.bounds.origin.y + (velocity.y * slideFactor));
+//        finalPoint.x = MIN(MAX(finalPoint.x, 0), self.view.bounds.size.width);
+//        finalPoint.y = MIN(MAX(finalPoint.y, 0), self.view.bounds.size.height);
+        CGRect bounds = self.bounds;
+        bounds.origin = finalPoint;
+        [UIView animateWithDuration:slideFactor*2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.bounds = bounds;
+        } completion:nil];
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E454CE391D994DC9007431E6 /* Man.m in Sources */ = {isa = PBXBuildFile; fileRef = E454CE381D994DC9007431E6 /* Man.m */; };
 		E46EEE651D53966E00C9505C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E46EEE641D53966E00C9505C /* main.m */; };
 		E46EEE681D53966E00C9505C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E46EEE671D53966E00C9505C /* AppDelegate.m */; };
 		E46EEE6B1D53966E00C9505C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E46EEE6A1D53966E00C9505C /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E454CE371D994DC9007431E6 /* Man.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Man.h; sourceTree = "<group>"; };
+		E454CE381D994DC9007431E6 /* Man.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Man.m; sourceTree = "<group>"; };
 		E46EEE601D53966E00C9505C /* PGBaseScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGBaseScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46EEE641D53966E00C9505C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E46EEE661D53966E00C9505C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				E46EEE671D53966E00C9505C /* AppDelegate.m */,
 				E46EEE691D53966E00C9505C /* ViewController.h */,
 				E46EEE6A1D53966E00C9505C /* ViewController.m */,
+				E454CE371D994DC9007431E6 /* Man.h */,
+				E454CE381D994DC9007431E6 /* Man.m */,
 				E46EEE961D53969E00C9505C /* PGLScrollView.h */,
 				E46EEE971D53969E00C9505C /* PGLScrollView.m */,
 				E46EEE6C1D53966E00C9505C /* Main.storyboard */,
@@ -278,6 +283,7 @@
 			files = (
 				E46EEE6B1D53966E00C9505C /* ViewController.m in Sources */,
 				E46EEE981D53969E00C9505C /* PGLScrollView.m in Sources */,
+				E454CE391D994DC9007431E6 /* Man.m in Sources */,
 				E46EEE681D53966E00C9505C /* AppDelegate.m in Sources */,
 				E46EEE651D53966E00C9505C /* main.m in Sources */,
 			);
